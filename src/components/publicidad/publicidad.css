@@ -1,0 +1,86 @@
+.publicidad {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.publicidad-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.buy-game-btn, .learn-more-btn {
+    position: absolute;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.buy-game-btn {
+    background-color: #ff0000;
+    color: #fff;
+    top: 450px;
+    left: 350px;
+    border-radius: 0; /* Bordes puntiagudos */
+}
+
+.learn-more-btn {
+    background-color: #00000048;
+    color: #fff;
+    top: 450px;
+    right: 180px;
+    border-radius: 0; /* Bordes puntiagudos */
+    border-color: antiquewhite;
+    
+}
+
+.buy-game-btn:hover {
+    background-color: #5e0000;
+}
+
+.learn-more-btn:hover {
+    background-color: #ff0000;
+}
+
+/* Oculta las imágenes y reposiciona los botones por defecto */
+.trampa1-img, .trampa2-img {
+    display: none;
+}
+
+@media only screen and (max-width: 390px) and (max-height: 844px) {
+    .publicidad-img {
+        display: none; /* Oculta la imagen de publicidad en móvil */
+    }
+
+    .trampa1-img, .trampa2-img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+  
+
+    .learn-more-btn {
+        top: auto;
+        bottom: 20px; /* Ajusta la posición en la parte baja de trampa2 */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 390px) and (max-height: 844px) {
+    .buy-game-btn {
+        width: calc(100% - 40px); /* Ajusta el ancho para llegar casi a los bordes */
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 490px; /* Coloca el botón en la parte baja de la imagen */
+        top: auto;
+        padding: 15px 20px; /* Aumenta el padding para hacer el botón más alto */
+        white-space: nowrap; /* Mantiene el texto en una sola línea */
+        text-align: center; /* Centra el texto dentro del botón */
+    }
+}
+

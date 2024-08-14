@@ -1,0 +1,160 @@
+/* src/components/Navbar.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #000000c0;
+  backdrop-filter: blur(8px); /* Ajusta el nivel de desenfoque aquí */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.logo-desktop {
+  height: 40px;
+}
+
+.logo-mobile {
+  display: none;
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links li {
+  position: relative; /* Para posicionar la línea */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #ff0000;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a:focus::after {
+  width: 100%; /* Expande la línea al ancho del botón */
+}
+
+.nav-links li a.active::after {
+  width: 100%; /* Mantiene la línea cuando el botón está activo */
+}
+
+.lightbulb-icon {
+  width: 20px; /* Ajusta el tamaño del icono según sea necesario */
+  margin-left: 5px;
+}
+
+.play-now {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 0; /* Bordes puntiagudos */
+  
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-now:hover {
+  background-color: #440000;
+}
+
+.play-now-desktop {
+  margin-left: auto; /* Empuja el botón al borde derecho en la versión de escritorio */
+}
+
+.hamburger-menu {
+  display: none;
+  height: 30px;
+  cursor: pointer;
+}
+
+.play-now-mobile {
+  display: none; /* Ocultar el botón en la versión de escritorio */
+  margin-top: 20px;
+}
+
+.game-mode {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 390px) {
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1001;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .play-now-desktop {
+    display: none; /* Ocultar el botón en la versión móvil */
+  }
+
+  .play-now-mobile {
+    display: block; /* Mostrar el botón en el menú hamburguesa */
+  }
+}

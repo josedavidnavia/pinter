@@ -1,0 +1,13 @@
+/* src/components/Button/Button.css */
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-button:hover {
+    color: #ff0000; /* Cambia al color rojo al hacer hover */
+}
