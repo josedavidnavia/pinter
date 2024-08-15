@@ -4,15 +4,16 @@ import Navbar from './components/Navbar/Navbar';
 import Publicidad from './components/publicidad/publicidad'; // Importa el componente Publicidad
 import Gmail from './components/gmail/gmail';
 import Welcome from './components/welcome/welcome';
+import Personajes from './components/personajes/personajes';
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Publicidad /> {/* Agrega el componente Publicidad debajo de Navbar */}
-      {/* Resto de tu contenido */}
+      <Publicidad /> 
       <Gmail />
       <Welcome />
+      <Personajes />
     </div>
   );
 };

@@ -1,0 +1,86 @@
+.personajes-container {
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 20px;
+  }
+  
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .banner-red, .banner-blue {
+    width: 48%;
+    padding: 30px 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0px;
+    position: relative;
+  }
+  
+  .banner-red {
+    background-color: #d50000;
+    background-image: linear-gradient(to bottom, #d50000, #a40606);
+  }
+  
+  .banner-blue {
+    background-color: #0d47a1;
+    background-image: linear-gradient(to bottom, #0d47a1, #021b79);
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .explore-button {
+    background-color: rgba(0, 0, 0, 0.507);
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 0px;
+  }
+  
+  .explore-button:hover {
+    background-color: rgba(201, 0, 0, 0.795);
+    color: rgb(255, 255, 255);
+  }
+  
+  .characters {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .character-img {
+    width: 23%;
+    border-radius: 10px;
+  }
+  
+  .view-button {
+    margin-top: 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0px;
+  }
+  
+  .view-button:hover {
+    background-color: #333;
+  }
+  
