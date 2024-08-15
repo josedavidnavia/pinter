@@ -42,7 +42,6 @@ const Navbar = () => {
           className="hamburger-menu"
           onClick={toggleMenu}
         />
-        {/* Asegúrate de que el botón "Play Now" esté siempre al final en la versión de escritorio */}
         <button className="play-now play-now-desktop">Play Now</button>
       </nav>
     </header>
